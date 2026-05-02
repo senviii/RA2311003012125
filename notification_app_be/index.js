@@ -81,7 +81,7 @@ app.get("/health", async (req, res) => {
   return res.status(200).json({ status: "ok", service: "notification_app_be" });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, async () => {
   await Log("backend", "info", "controller", `Server started on port ${PORT}`);
   console.log(`Notification backend running on http://localhost:${PORT}`);
