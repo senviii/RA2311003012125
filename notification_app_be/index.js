@@ -2,7 +2,9 @@ const express = require("express");
 const axios = require("axios");
 const { Log } = require("../logging_middleware/index");
 
+const cors = require("cors");
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const BASE_URL = "http://20.207.122.201/evaluation-service";
